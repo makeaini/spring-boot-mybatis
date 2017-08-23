@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<include resource="org/springframework/boot/logging/logback/base.xml" />
+	<contextName>logback</contextName>
+	<logger name="com.spring.boot.mybatis.mapper" level="debug" additivity="false">
+		<appender-ref ref="CONSOLE"/>
+	</logger>
+	<logger name="root" level="INFO">
+		<appender-ref ref="CONSOLE"/>
+		<appender-ref ref="FILE"/>
+	</logger>
+	<!--配置spring 环境-->
+	<springProfile name="test,dev">
+		<logger name="com.spring.boot.mybatis.controller" level="debug" />
+	</springProfile>
+	<springProfile name="prod">
+		<logger name="com.spring.boot.mybatis.controller" level="info" />
+	</springProfile>
+</configuration>
