@@ -6,10 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
 
-import java.util.Map;
 
-import static org.apache.ibatis.jdbc.SelectBuilder.FROM;
-import static org.apache.ibatis.jdbc.SelectBuilder.SELECT;
 
 /**
  * Created by shining on 2017-08-16.
