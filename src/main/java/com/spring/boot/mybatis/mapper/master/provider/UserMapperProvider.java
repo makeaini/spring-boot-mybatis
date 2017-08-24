@@ -1,4 +1,4 @@
-package com.spring.boot.mybatis.mapper.provider;
+package com.spring.boot.mybatis.mapper.master.provider;
 
 import com.spring.boot.mybatis.entity.User;
 import org.apache.ibatis.jdbc.SQL;

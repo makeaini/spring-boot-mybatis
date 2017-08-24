@@ -1,9 +1,8 @@
-package com.spring.boot.mybatis.mapper;
+package com.spring.boot.mybatis.mapper.master;
 
-import com.spring.boot.mybatis.entity.Teacher;
+import org.apache.ibatis.annotations.Mapper;
 import com.spring.boot.mybatis.entity.User;
 import com.spring.boot.mybatis.enums.UserSexEnum;
-import com.spring.boot.mybatis.mapper.provider.UserMapperProvider;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
@@ -16,7 +15,7 @@ public interface UserMapper {
     @Insert("INSERT INTO user(user_name,user_password,user_sex,user_age) VALUES (#{userName}, #{userPassword},#{userSexEnum},#{userAge}) ")
     @Options(useGeneratedKeys= true, keyProperty="id")
     int insert(User user);
-    @SelectProvider(type = UserMapperProvider.class,method = "findByName")
+    @SelectProvider(method = "findByName",type = com.spring.boot.mybatis.mapper.master.provider.UserMapperProvider.class)
     @Results(value = {
             @Result(property = "userSexEnum",  column = "user_sex", javaType = UserSexEnum.class),
             @Result(property = "userName", column = "user_name"),

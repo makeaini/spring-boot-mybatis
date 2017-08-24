@@ -3,7 +3,6 @@ package com.spring.boot.mybatis;
 import com.github.pagehelper.PageInfo;
 import com.spring.boot.mybatis.entity.User;
 import com.spring.boot.mybatis.enums.UserSexEnum;
-import com.spring.boot.mybatis.mapper.UserMapper;
 import com.spring.boot.mybatis.service.UserServiceI;
 import org.junit.Ignore;
 import org.junit.Test;
